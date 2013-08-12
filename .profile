@@ -23,20 +23,20 @@ export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
   export BUNDLER_EDITOR=mvim
-  #export RUBY_HEAP_MIN_SLOTS=1000000
-  #export RUBY_HEAP_SLOTS_INCREMENT=1000000
-  #export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-  #export RUBY_GC_MALLOC_LIMIT=1000000000
-  #export RUBY_HEAP_FREE_MIN=500000
 fi
 
 # prompt
 . $HOME/Play/gists/prompt/termwide.sh
 
 # z
-. $HOME/Play/z/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
+
+# bash completion
+. /usr/local/etc/bash_completion.d/git-completion.bash
+. /usr/local/etc/bash_completion.d/hub.bash_completion.sh
 
 # aliases
 alias ll='ls -lh'
 alias git='hub'
 alias gti='git'
+alias cd.='cd $(git root)'
