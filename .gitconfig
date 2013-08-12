@@ -1,0 +1,40 @@
+[user]
+  name = Visnu Pitiyanuvath
+  email = visnupx@gmail.com
+[color]
+  ui = auto
+[color "branch"]
+  current = blue ul
+  local = blue
+[color "diff"]
+  meta = black bold
+  frag = blue
+  old = red
+  new = green
+  whitespace = red reverse
+[color "status"]
+  untracked = red ul
+[push]
+  default = current
+[branch]
+  autosetuprebase = always
+[alias]
+  br  = branch
+  ci  = commit --verbose
+  co  = checkout
+  oc  = checkout
+  d   = diff --ignore-space-change
+  l   = log --decorate
+  pul = pull
+  st  = status --short --branch
+  fgrep = grep --fixed-strings
+  gr  = grep --heading --line-number --break
+  fgr = grep --heading --line-number --break --fixed-strings
+  root = rev-parse --show-toplevel
+[github]
+  user = visnup
+  password = !security 2>&1 >/dev/null find-internet-password -gs github.com | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'
+[core]
+  editor = vim
+[credential]
+  helper = osxkeychain
