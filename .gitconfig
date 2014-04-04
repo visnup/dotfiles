@@ -39,3 +39,7 @@
   editor = vim
 [credential]
   helper = osxkeychain
+[merge]
+	tool = gvimdiff
+[help]
+	autocorrect = 1
