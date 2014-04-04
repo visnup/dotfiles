@@ -40,3 +40,7 @@ alias ll='ls -lh'
 alias git='hub'
 alias gti='git'
 alias cd.='cd $(git root)'
+function mdfind.()
+{
+  mdfind -onlyin . $@ | sed "s#${PWD}#.#" | xargs grep $@
+}
