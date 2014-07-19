@@ -41,5 +41,6 @@
   helper = osxkeychain
 [merge]
 	tool = gvimdiff
+	defaultToUpstream = true
 [help]
 	autocorrect = 1
