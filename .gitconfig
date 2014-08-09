@@ -14,6 +14,8 @@
   whitespace = red reverse
 [color "status"]
   untracked = red ul
+[push]
+  default = simple
 [branch]
   autosetuprebase = always
 [alias]
