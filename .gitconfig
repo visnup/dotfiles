@@ -15,7 +15,7 @@
 [color "status"]
   untracked = red ul
 [push]
-  default = simple
+  default = current
 [branch]
   autosetuprebase = always
 [alias]
@@ -32,6 +32,7 @@
   fgr = grep --heading --line-number --break --fixed-strings
   root = rev-parse --show-toplevel
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  pr = pull-request --browse
 [github]
   user = visnup
   password = !security 2>&1 >/dev/null find-internet-password -gs github.com | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'
