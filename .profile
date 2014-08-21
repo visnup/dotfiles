@@ -38,7 +38,7 @@ fi
 # aliases
 alias ll='ls -lh'
 alias git='hub'
-alias gti='git'
+alias gti='hub'
 alias cd.='cd $(git root)'
 function mdfind.()
 {
