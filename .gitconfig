@@ -22,17 +22,18 @@
   br  = branch
   ci  = commit --verbose
   co  = checkout
-  oc  = checkout
   d   = diff --ignore-space-change
-  l   = log --decorate
-  pul = pull
-  st  = status --short --branch
+  fgr = grep --heading --line-number --break --fixed-strings
   fgrep = grep --fixed-strings
   gr  = grep --heading --line-number --break
-  fgr = grep --heading --line-number --break --fixed-strings
-  root = rev-parse --show-toplevel
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  l   = log --decorate
+  oc  = checkout
   pr = pull-request --browse
+  pul = pull
+  push = push --set-upstream
+  root = rev-parse --show-toplevel
+  st  = status --short --branch
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [github]
   user = visnup
   password = !security 2>&1 >/dev/null find-internet-password -gs github.com | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'
