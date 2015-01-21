@@ -31,6 +31,9 @@ fi
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
+# more shared bash history
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # bash completion
 . /usr/local/etc/bash_completion.d/git-completion.bash
 . /usr/local/etc/bash_completion.d/hub.bash_completion.sh
