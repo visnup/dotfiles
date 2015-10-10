@@ -30,7 +30,6 @@
   oc  = checkout
   pr = pull-request --browse
   pul = pull
-  push = push --set-upstream
   root = rev-parse --show-toplevel
   st  = status --short --branch
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
