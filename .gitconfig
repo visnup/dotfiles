@@ -26,6 +26,7 @@
   fgr = grep --heading --line-number --break --fixed-strings
   fgrep = grep --fixed-strings
   gr  = grep --heading --line-number --break
+  ic  = commit --verbose
   l   = log --decorate
   oc  = checkout
   pr = pull-request --browse
@@ -39,7 +40,7 @@
 [core]
   editor = vim
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [merge]
 	tool = gvimdiff
 	defaultToUpstream = true
