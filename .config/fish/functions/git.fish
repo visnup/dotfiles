@@ -1,3 +1,3 @@
 function git --description 'alias git hub'
-	hub  $argv;
+	hub $argv;
 end
