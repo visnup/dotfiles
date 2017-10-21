@@ -1,0 +1,1 @@
+10 0 1 * *	curl -s https://harpers-mshkvgythk.now.sh >$HOME/.motd
