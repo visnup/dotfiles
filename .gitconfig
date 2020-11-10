@@ -40,13 +40,13 @@
 [core]
   editor = vim
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [merge]
-	tool = gvimdiff
-	defaultToUpstream = true
+  tool = gvimdiff
+  defaultToUpstream = true
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [fetch]
   prune = true
 [hub]
-	protocol = https
+  protocol = https
