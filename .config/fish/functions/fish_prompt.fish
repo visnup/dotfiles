@@ -16,26 +16,26 @@ function fish_prompt --description 'Write out the prompt'
     end
 
     # If we're running via SSH, change the host color.
-    set -l color_host $fish_color_autosuggestion
+    set -l host ""
     if set -q SSH_TTY
-        set color_host $fish_color_host_remote
+        set host (echo -n -s " " (prompt_hostname))
     end
 
     # Simplest vcs prompt
     set -l git_branch (git rev-parse --abbrev-ref HEAD 2>/dev/null)
     set -l git " $git_branch "
     if [ $git = "  " ]
-        set git ''
+        set git ""
     end
 
     # Write pipestatus
     set -l prompt_status (__fish_print_pipestatus "[" "] " "|" (set_color $fish_color_status) (set_color --bold $fish_color_status) $last_pipestatus)
 
     # Fill with ---
-    set -l length (echo -s "[ 00:00 AM -" $git (prompt_hostname) " " (prompt_pwd) " ]" | wc -c | tr -d ' ')
+    set -l length (echo -n -s "[ 00:00 AM -" $git $host " " (prompt_pwd) " ]" | wc -c | tr -d ' ')
     set -l fill (printf '%*s\n' (math (tput cols)-$length) '' | tr ' ' –)
 
     echo $normal
-    echo -s "[ " (date +'%I:%M %p') " –" (set_color $fish_color_param) $git $normal $fill " " (set_color $color_host) (prompt_hostname) " " (set_color $fish_color_cwd) (prompt_pwd) $normal " ]"
+    echo -s "[ " (date +'%I:%M %p') " –" (set_color $fish_color_param) $git $normal $fill (set_color $fish_color_host_remote) $host " " (set_color $fish_color_cwd) (prompt_pwd) $normal " ]"
     echo -n -s $prompt_status $suffix " "
 end
