@@ -34,15 +34,9 @@
   root = rev-parse --show-toplevel
   st  = status --short --branch
   tree = log --graph --decorate --pretty=oneline --abbrev-commit
-[github]
-  user = visnup
-  password = !security 2>&1 >/dev/null find-internet-password -gs github.com | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'
 [core]
   editor = vim
-[credential]
-  helper = osxkeychain
 [merge]
-  tool = gvimdiff
   defaultToUpstream = true
 [help]
   autocorrect = 1
