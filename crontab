@@ -1,2 +1,2 @@
-10 0 1 * *	curl -s https://harpers.visnup.now.sh >$HOME/.motd
+10 0 1 * *	curl -s https://harpers-visnup.vercel.app >$HOME/.motd
 10 0 * * *	/usr/local/bin/docker system prune --force --volumes --filter label!=prune >/dev/null 2>&1
