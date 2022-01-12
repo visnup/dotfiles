@@ -16,20 +16,12 @@
   untracked = red ul
 [push]
   default = current
-[branch]
-  autosetuprebase = always
 [alias]
   br  = branch
   ci  = commit --verbose
   co  = checkout
-  d   = diff --ignore-space-change
-  fgr = grep --heading --line-number --break --fixed-strings
-  fgrep = grep --fixed-strings
-  gr  = grep --heading --line-number --break
   ic  = commit --verbose
-  l   = log --decorate
   oc  = checkout
-  pr = pull-request --browse
   pul = pull
   root = rev-parse --show-toplevel
   st  = status --short --branch
@@ -44,3 +36,5 @@
   prune = true
 [hub]
   protocol = https
+[pull]
+  rebase = true
