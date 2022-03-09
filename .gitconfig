@@ -1,40 +1,42 @@
 [user]
-  name = Visnu Pitiyanuvath
-  email = visnup@gmail.com
+	name = Visnu Pitiyanuvath
+	email = visnup@gmail.com
 [color]
-  ui = auto
+	ui = auto
 [color "branch"]
-  current = blue ul
-  local = blue
+	current = blue ul
+	local = blue
 [color "diff"]
-  meta = black bold
-  frag = blue
-  old = red
-  new = green
-  whitespace = red reverse
+	meta = black bold
+	frag = blue
+	old = red
+	new = green
+	whitespace = red reverse
 [color "status"]
-  untracked = red ul
+	untracked = red ul
 [push]
-  default = current
+	default = current
 [alias]
-  br  = branch
-  ci  = commit --verbose
-  co  = checkout
-  ic  = commit --verbose
-  oc  = checkout
-  pul = pull
-  root = rev-parse --show-toplevel
-  st  = status --short --branch
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	br  = branch
+	ci  = commit --verbose
+	co  = checkout
+	ic  = commit --verbose
+	oc  = checkout
+	pul = pull
+	root = rev-parse --show-toplevel
+	st  = status --short --branch
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
 [core]
-  editor = vim
+	editor = vim
 [merge]
-  defaultToUpstream = true
+	defaultToUpstream = true
 [help]
-  autocorrect = 1
+	autocorrect = 1
 [fetch]
-  prune = true
+	prune = true
 [hub]
-  protocol = https
+	protocol = https
 [pull]
-  rebase = true
+	rebase = true
+[init]
+	defaultBranch = main
