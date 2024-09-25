@@ -38,6 +38,10 @@
     "dark": "One Dark",
     "light": "One Dark"
   },
+  "vim": {
+    "use_system_clipboard": "never",
+    "use_smartcase_find": true
+  },
   "vim_mode": true,
   "ui_font_size": 16,
   "use_autoclose": false,
