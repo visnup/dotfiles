@@ -10,13 +10,14 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
   "autosave": "on_window_change",
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 16,
+  "file_scan_exclusions": ["**/vfs.json"],
   "indent_guides": { "enabled": false },
   "languages": {
     "YAML": {
@@ -24,14 +25,20 @@
     }
   },
   "outline_panel": {
+    "indent_guides": { "show": "never" },
     "indent_size": 10
   },
   "project_panel": {
     "dock": "right",
+    "indent_guides": { "show": "never" },
     "indent_size": 10
   },
   "tabs": {
     "close_position": "left"
+  },
+  "terminal": {
+    "detect_venv": { "on": { "activate_script": "fish" } },
+    "option_as_meta": true
   },
   "theme": {
     "mode": "system",
