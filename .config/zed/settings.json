@@ -20,6 +20,9 @@
   "file_scan_exclusions": ["**/vfs.json"],
   "indent_guides": { "enabled": false },
   "languages": {
+    "SQL": {
+      "tab_size": 2
+    },
     "YAML": {
       "indent_guides": { "enabled": true }
     }
