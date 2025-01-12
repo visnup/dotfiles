@@ -7,15 +7,15 @@
 // from the command palette.
 [
   {
-    "context": "Terminal",
+    "use_key_equivalents": true,
     "bindings": {
-      "cmd-t": "workspace::NewTerminal"
+      "cmd-e": "project_panel::ToggleFocus"
     }
   },
   {
-    "context": "AssistantPanel",
+    "context": "Terminal",
     "bindings": {
-      "cmd-shift-e": "project_panel::ToggleFocus"
+      "cmd-t": "workspace::NewTerminal"
     }
   }
 ]
