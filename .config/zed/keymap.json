@@ -17,5 +17,14 @@
     "bindings": {
       "cmd-t": "workspace::NewTerminal"
     }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "alt-w": "vim::NextSubwordStart",
+      "alt-b": "vim::PreviousSubwordStart",
+      "alt-e": "vim::NextSubwordEnd",
+      "g alt-e": "vim::PreviousSubwordEnd"
+    }
   }
 ]
