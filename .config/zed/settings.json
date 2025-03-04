@@ -8,12 +8,12 @@
 // command palette
 {
   "features": {
-    "inline_completion_provider": "zed"
+    "edit_prediction_provider": "zed"
   },
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -21,6 +21,9 @@
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 16,
   "file_scan_exclusions": ["**/vfs.json"],
+  "git_panel": {
+    "dock": "right"
+  },
   "indent_guides": { "enabled": false },
   "languages": {
     "SQL": {
