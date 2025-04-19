@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# git delete-squashed
+
+git checkout -q main
+git for-each-ref refs/heads/ "--format=%(refname:short)" | \
+while read branch; do
+  [ "$branch" = "main" ] && continue
+  mergeBase=$(git merge-base main $branch)
+  if [[ $(git cherry main $(git commit-tree $(git rev-parse $branch\^{tree}) -p $mergeBase -m _)) == "-"* ]]; then
+    git branch -D $branch
+  fi
+done
