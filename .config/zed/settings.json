@@ -11,9 +11,14 @@
     "edit_prediction_provider": "zed"
   },
   "assistant": {
-    "default_model": {
+    "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -21,24 +26,16 @@
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 16,
   "file_scan_exclusions": ["**/vfs.json"],
-  "git_panel": {
-    "dock": "right"
-  },
   "indent_guides": { "enabled": false },
   "languages": {
-    "SQL": {
-      "tab_size": 2
-    },
-    "YAML": {
-      "indent_guides": { "enabled": true }
-    }
+    "SQL": { "tab_size": 2 },
+    "YAML": { "indent_guides": { "enabled": true } }
   },
   "outline_panel": {
     "indent_guides": { "show": "never" },
     "indent_size": 10
   },
   "project_panel": {
-    "dock": "right",
     "indent_guides": { "show": "never" },
     "indent_size": 10
   },
