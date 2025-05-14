@@ -9,7 +9,10 @@
   {
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-e": "project_panel::ToggleFocus"
+      "ctrl-g up": "git::Push",
+      "ctrl-g down": "git::Pull",
+      "ctrl-g shift-up": "git::ForcePush",
+      "ctrl-g d": "git::Diff"
     }
   },
   {
