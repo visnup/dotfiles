@@ -10,12 +10,12 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "assistant": {
+  "agent": {
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
