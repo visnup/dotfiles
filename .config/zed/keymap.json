@@ -7,6 +7,7 @@
 // from the command palette.
 [
   {
+    "context": "Workspace",
     "use_key_equivalents": true,
     "bindings": {
       "ctrl-g up": "git::Push",
