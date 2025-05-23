@@ -17,8 +17,8 @@
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
@@ -26,6 +26,7 @@
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 16,
   "file_scan_exclusions": ["**/vfs.json"],
+  "git_panel": { "default_width": 240 },
   "indent_guides": { "enabled": false },
   "languages": {
     "SQL": { "tab_size": 2 },
@@ -36,6 +37,7 @@
     "indent_size": 10
   },
   "project_panel": {
+    "default_width": 240,
     "indent_guides": { "show": "never" },
     "indent_size": 10
   },
