@@ -11,16 +11,16 @@
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4"
     },
     "default_profile": "write",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4-5-latest"
     },
-    "version": "2"
   },
   "autosave": "on_window_change",
   "buffer_font_family": "Fira Code",
