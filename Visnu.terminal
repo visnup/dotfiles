@@ -1114,6 +1114,8 @@
 	<true/>
 	<key>name</key>
 	<string>Visnu</string>
+	<key>rowCount</key>
+	<integer>43</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
