@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Catppuccin Macchiato",
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -30,6 +30,9 @@
   "git_panel": { "default_width": 240 },
   "indent_guides": { "enabled": false },
   "languages": {
+    "Swift": {
+      "tab_size": 2
+    },
     "SQL": { "tab_size": 2 },
     "YAML": { "indent_guides": { "enabled": true } }
   },
@@ -51,7 +54,7 @@
   },
   "theme": {
     "mode": "dark",
-    "dark": "One Dark",
+    "dark": "Catppuccin Macchiato",
     "light": "One Light"
   },
   "vim": {
