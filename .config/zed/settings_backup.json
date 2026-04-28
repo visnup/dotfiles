@@ -7,15 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "agent_servers": {
-    "claude-acp": {
-      "type": "registry"
-    }
-  },
-  "cli_default_open_behavior": "new_window",
-  "collaboration_panel": {
-    "dock": "left"
-  },
   "lsp": {
     "vtsls": {
       "settings": {
@@ -37,28 +28,32 @@
   "calls": {
     "mute_on_join": true,
   },
+  "agent_servers": {
+    "claude": {
+      "default_model": "sonnet",
+      "default_mode": "acceptEdits",
+      "favorite_models": [],
+      "default_config_options": {},
+      "favorite_config_option_values": {},
+    },
+  },
   "icon_theme": "Catppuccin Macchiato",
   "agent": {
-    "sidebar_side": "right",
-    "dock": "right",
     "inline_assistant_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4",
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "effort": "high",
-      "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-opus-4-7-latest",
+      "model": "claude-sonnet-4-6-latest",
     },
   },
   "autosave": "on_window_change",
   "buffer_font_family": "Fira Code",
   "buffer_font_size": 16,
   "file_scan_exclusions": ["**/vfs.json"],
-  "git_panel": { "dock": "left",
-                 "tree_view": true, "default_width": 240 },
+  "git_panel": { "tree_view": true, "default_width": 240 },
   "indent_guides": { "enabled": false },
   "languages": {
     "Swift": { "tab_size": 2 },
@@ -66,12 +61,10 @@
     "YAML": { "indent_guides": { "enabled": true } },
   },
   "outline_panel": {
-    "dock": "left",
     "indent_guides": { "show": "never" },
     "indent_size": 10,
   },
   "project_panel": {
-    "dock": "left",
     "default_width": 240,
     "indent_guides": { "show": "never" },
     "indent_size": 10,
