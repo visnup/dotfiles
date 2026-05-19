@@ -1,0 +1,106 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "cli_default_open_behavior": "new_window",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "diff_view_style": "unified",
+  "calls": {
+    "mute_on_join": true,
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
+    "sidebar_side": "right",
+    "dock": "right",
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4",
+    },
+    "default_profile": "ask",
+    "default_model": {
+      "effort": "low",
+      "enable_thinking": false,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-latest",
+    },
+  },
+  "autosave": "on_window_change",
+  "buffer_font_family": "Fira Code",
+  "buffer_font_size": 16,
+  "file_scan_exclusions": ["**/vfs.json"],
+  "git_panel": { "dock": "left",
+                 "tree_view": true, "default_width": 240 },
+  "indent_guides": { "enabled": false },
+  "languages": {
+    "Swift": { "tab_size": 2 },
+    "SQL": { "tab_size": 2 },
+    "YAML": { "indent_guides": { "enabled": true } },
+  },
+  "outline_panel": {
+    "dock": "left",
+    "indent_guides": { "show": "never" },
+    "indent_size": 10,
+  },
+  "project_panel": {
+    "dock": "left",
+    "default_width": 240,
+    "indent_guides": { "show": "never" },
+    "indent_size": 10,
+  },
+  "tabs": {
+    "close_position": "left",
+  },
+  "terminal": {
+    "detect_venv": { "on": { "activate_script": "fish" } },
+    "option_as_meta": true,
+  },
+  "theme": {
+    "mode": "dark",
+    "dark": "Catppuccin Macchiato",
+    "light": "One Light",
+  },
+  "vim": {
+    "use_system_clipboard": "never",
+    "use_smartcase_find": true,
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "use_autoclose": false,
+  "wrap_guides": [80],
+}
