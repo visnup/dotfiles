@@ -7,6 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "ui_font_size": 14.0,
+  "buffer_font_size": 14.0,
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "cli_default_open_behavior": "new_window",
+  "diff_view_style": "unified",
   "tabs": {
     "close_position": "left"
   },
@@ -14,17 +35,53 @@
     "tree_view": true
   },
   "languages": {
+    "HTML": {
+      "tab_size": 2
+    },
+    "Svelte": {
+      "tab_size": 2
+    },
+    "TSX": {
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "format_on_save": "on"
+    },
     "SQL": {
       "tab_size": 2
     }
   },
   "agent": {
+    "tool_permissions": {
+      "tools": {
+        "create_directory": {
+          "always_allow": [
+            {
+              "pattern": "^bail/app/"
+            }
+          ]
+        },
+        "delete_path": {
+          "always_allow": [
+            {
+              "pattern": "^bail/app/\\[at\\]/"
+            }
+          ]
+        },
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
     "default_profile": "write",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-6-latest",
+      "model": "claude-sonnet-5",
       "enable_thinking": true,
-      "effort": "high"
+      "effort": "low"
     },
     "favorite_models": [],
     "model_parameters": []
