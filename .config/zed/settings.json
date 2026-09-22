@@ -112,8 +112,8 @@
   },
   "theme": {
     "mode": "dark",
-    "dark": "Catppuccin Macchiato",
     "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato"
   },
   "vim": {
     "use_system_clipboard": "never",
