@@ -1,2 +1,5 @@
 .config/fish/fishd.*
 .config/yarn
+.config/rclone/
+.config/ofscraper/
+.config/backup/
