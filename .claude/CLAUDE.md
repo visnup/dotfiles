@@ -1,3 +1,5 @@
+This file lives in a public dotfiles repository. Keep everything in it public-facing — no private names, paths, projects, credentials, or anything I wouldn't publish.
+
 # Code comments
 
 Write very few. Omit a comment unless it's absolutely necessary — something non-obvious the code can't say itself (a workaround, an upstream issue link, a surprising invariant). Don't restate what the code does, label sections, or narrate a change.
@@ -45,6 +47,10 @@ Test suites, CI watches, deploys, long installs — run them with `run_in_backgr
 Don't pipe them through `tail` or `head` either. That buffers everything until exit, so I see nothing while it runs. Issue the bare command and read the output file if you need interim results.
 
 Never start a foreground command to wait on one — no `until ! pgrep ...; do sleep; done`, no `sleep N; check`, no repeated status polls. The harness re-invokes you when the task finishes, so polling adds nothing and burns the turn. Launch it, then do unrelated work or end the turn.
+
+# Python
+
+Use uv, not pip or a hand-made venv. For a standalone script, declare its dependencies inline (PEP 723) so `uv run script.py` builds the environment itself and there's no venv to lose.
 
 # File edits
 
