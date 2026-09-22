@@ -26,9 +26,9 @@ Code that's about to be replaced earns less structure, not more. Tests and enfor
 
 # Working tree
 
-I edit and revert while you work. Expect files you wrote to change under you, commits to be reset, staged work to be discarded. Check `git status` and `git diff HEAD` before editing or summarizing; don't assume the tree is where you left it.
+I edit and revert while you work. Expect files you wrote to change under you, commits to be reset or made, staged work to be discarded or pushed. Check `git status` and `git diff HEAD` before editing or summarizing; don't assume the tree is where you left it.
 
-Treat my edits as decisions — keep the naming and the simplifications. If you put back something I removed, say why.
+Treat my edits as decisions — keep the naming and the simplifications. Learn from the conscious choices I've made and update your coding style to match. If you put back something I removed, say why.
 
 # Vendor claims
 
@@ -44,9 +44,11 @@ Reproduction beats reasoning. When a confident claim turns out wrong, say so pla
 
 Test suites, CI watches, deploys, long installs — run them with `run_in_background: true` and keep working. Don't block the turn on them; I keep talking while work is in flight.
 
-Don't pipe them through `tail` or `head` either. That buffers everything until exit, so I see nothing while it runs. Issue the bare command and read the output file if you need interim results.
+Don't pipe them through `tail` or `head` or redirect stdout or stderr to a file either. Piping buffers everything until exit; redirecting sends it where the harness never looks. Either way I see nothing while it runs. Issue the bare command and read the background's output file the harness already provides if you need interim results.
 
-Never start a foreground command to wait on one — no `until ! pgrep ...; do sleep; done`, no `sleep N; check`, no repeated status polls. The harness re-invokes you when the task finishes, so polling adds nothing and burns the turn. Launch it, then do unrelated work or end the turn.
+Never start a foreground command to poll a background one — no `until ! pgrep ...; do sleep; done`, no `sleep N; check`, no repeated status polls. The harness re-invokes you when the task finishes, so polling adds nothing and burns the turn. Launch it, then do other work or end the turn.
+
+Never use Monitor to wait on a `run_in_background: true` command either — same reason. Monitor is for things the harness can't track, like a process we're debugging.
 
 # Python
 
