@@ -1,4 +1,4 @@
 function fish_greeting
-  set line (random 1 (cat ~/.motd | wc -l))
-  awk "NR==$line" ~/.motd | fold -s -w (tput cols)
+  test -s ~/.motd; or return
+  random choice (cat ~/.motd) | fold -s -w $COLUMNS
 end
