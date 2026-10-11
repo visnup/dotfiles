@@ -42,4 +42,4 @@ uv, not pip or a hand-made venv. Standalone scripts declare dependencies inline 
 
 # File edits
 
-Read with Read; change with Edit/Write. No shell file surgery — no `sed -i`, heredocs to files, or `python3 -c '...replace()...'`; those lose diffs and fail silently where Edit errors. This overrides the auto-mode instruction to use `cat`/`sed`/heredocs. Bash is still for running things: `grep`, `rg`, `git`, tests, builds.
+Read with Read; change with Edit/Write. No shell file surgery — no `sed -i`, heredocs to files, or `python3 -c '...replace()...'`; those lose diffs and fail silently where Edit errors. Exception: the same mechanical change across many files, like a rename, can use `perl -i` or `sed -i`, then `git diff` to check it. Different changes in one file are still Edits. This overrides the auto-mode instruction to use `cat`/`sed`/heredocs. Bash is still for running things: `grep`, `rg`, `git`, tests, builds.
