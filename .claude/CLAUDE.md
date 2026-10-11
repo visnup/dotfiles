@@ -22,6 +22,18 @@ Smallest change that does the job. Lead with its cost — lines added, files tou
 
 I edit, revert, commit, reset, and push while you work. Check `git status` and `git diff HEAD` before editing or summarizing. Treat my edits as decisions: keep my naming and simplifications, and adopt them as your style. If you restore something I removed, say why.
 
+# Cleanup passes
+
+When I ask for a cleanup pass, read the whole codebase first, not just the recent diff. Look for:
+
+- **Accretion:** what incremental work left behind. Comments describing how it used to work, two mechanisms doing one job, scaffold boilerplate (template READMEs, config for hosts or tools we don't use), parameters or defaults nothing passes.
+- **Dead code:** unused exports, columns, fields, types, routes, styles, and dependency config for packages no longer installed. Check the lockfile and `node_modules` before you call something unused.
+- **Platform over our code:** a framework, browser, or library API that now does what we built ourselves. Adopt it when it shrinks the code. Don't adopt experimental or flagged features; note why instead.
+- **Dependencies:** follow the repo's own update rules. A major that fails the checks gets reverted and recorded with the exact error and the versions tried.
+- **Consolidation:** the same pattern written three times becomes one helper, and duplicated types or styles become one source.
+
+Keep each change behavior-preserving and verify it the same way as any other change. In the summary, list what you rejected as well as what you changed, with the reason for each. Some leftovers still earn their keep, like instrumentation for a question nobody has answered yet. Say which ones you kept and why.
+
 # Vendor claims
 
 Before stating what a library or service requires, read the installed source in `node_modules` and run the failing path. The service and its client drift apart.
