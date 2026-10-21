@@ -2,12 +2,17 @@
 
 # git delete-squashed
 
-git checkout -q main
-git for-each-ref refs/heads/ "--format=%(refname:short)" | \
-while read branch; do
-  [ "$branch" = "main" ] && continue
-  mergeBase=$(git merge-base main $branch)
-  if [[ $(git cherry main $(git commit-tree $(git rev-parse $branch\^{tree}) -p $mergeBase -m _)) == "-"* ]]; then
-    git branch -D $branch
+base=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null)
+base=${base#origin/}
+base=${base:-main}
+current=$(git branch --show-current)
+
+git for-each-ref refs/heads/ --format='%(refname:short)' |
+while read -r branch; do
+  [[ $branch == "$base" || $branch == "$current" ]] && continue
+  mergeBase=$(git merge-base "$base" "$branch") || continue
+  if [[ $mergeBase == $(git rev-parse "$branch") ||
+        $(git cherry "$base" "$(git commit-tree "$branch^{tree}" -p "$mergeBase" -m _)") == "-"* ]]; then
+    git branch -D "$branch"
   fi
 done

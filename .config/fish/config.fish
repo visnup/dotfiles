@@ -12,6 +12,7 @@ set -gx JAVA_HOME /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 
 # uv tool shims: frida, frida-ps, frida-trace, ...
 fish_add_path $HOME/.local/bin
+fish_add_path $HOME/Developer/visnup/dotfiles/bin
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/visnup/.lmstudio/bin
