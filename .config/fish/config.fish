@@ -8,8 +8,6 @@ end
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
-set -gx JAVA_HOME /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
-
 # uv tool shims: frida, frida-ps, frida-trace, ...
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/Developer/visnup/dotfiles/bin
