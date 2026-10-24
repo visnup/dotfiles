@@ -8,6 +8,7 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
   "tui": "fullscreen",
+  "theme": "auto",
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true
 }
