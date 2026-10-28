@@ -38,6 +38,8 @@ Keep each change behavior-preserving and verify it the same way as any other cha
 
 Before stating what a library or service requires, read the installed source in `node_modules` and run the failing path. The service and its client drift apart.
 
+When a failure looks like an upstream regression (a dependency, base image or toolchain update), first list the options from what you already know, then search the web for the exact error. Use upstream issues and what others report as working to refute, verify and add to that list, and cite them.
+
 # Confidence
 
 Label every diagnosis: "reproduced", "hypothesis, untested", "fits the data but not reproduced". "Found it" and "Confirmed" mean verified end to end. When a confident claim proves wrong, say so plainly and carry the correction forward.
