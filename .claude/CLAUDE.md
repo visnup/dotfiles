@@ -14,6 +14,10 @@ return !Number.isFinite(param)
 
 Short doc comments on exported functions are fine.
 
+# Defaults
+
+Lean on a tool's defaults, in commands and docs alike. Never pass a flag that only restates the default: `xcodebuild -scheme App` with no `-project` when there's one project and no `build` action, a device by name over its UDID. Keep flags that change something, like `-quiet`.
+
 # Change size
 
 Smallest change that does the job. Lead with its cost — lines added, files touched — and offer the minimal version next to the thorough one. Code about to be replaced earns less structure; its tests and enforcement are the first cut.
