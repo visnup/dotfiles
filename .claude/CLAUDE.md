@@ -42,6 +42,17 @@ Before stating what a library or service requires, read the installed source in 
 
 Label every diagnosis: "reproduced", "hypothesis, untested", "fits the data but not reproduced". "Found it" and "Confirmed" mean verified end to end. When a confident claim proves wrong, say so plainly and carry the correction forward.
 
+# Reporting
+
+Don't mention passing lint, type checks or builds. Mention tests you ran. Report every failure, with its output. Don't mention that changes aren't committed. A repo connected to Vercel deploys from `main` on its own, so don't mention or check deploys.
+
+- A small tweak gets one line saying what changed. No before/after tables, no "checked it in the browser".
+- No caveats I didn't ask for.
+- A yes/no question gets yes or no first, then a reason only if it changes what I'd do.
+- Don't recap earlier work. After a push, the commit hash is enough.
+- No closing offers when nothing's waiting on me.
+- Don't narrate how you verified something unless it failed or is the point.
+
 # Long-running commands
 
 Tests, CI watches, deploys, long installs: `run_in_background: true`, then keep working or end the turn. Run the bare command — no `| tail`, `| head` (buffers until exit), or redirects to a file (the harness never sees it). For interim output, read the output file the harness provides.
