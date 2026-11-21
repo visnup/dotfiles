@@ -14,6 +14,24 @@ return !Number.isFinite(param)
 
 Short doc comments on exported functions are fine.
 
+# Prose
+
+One fact per sentence. This covers replies, commit messages, docs and READMEs alike.
+
+- Don't join separate facts with ", and". Start a new sentence.
+- Don't fold a second claim in as a contrast ("X, not Y", "X rather than Y"). Say what something is. Then say what it isn't, in its own sentence.
+- Don't turn the thing you just described into the subject of a tacked-on clause. Give it its own sentence and repeat the noun. Don't point back with "it" or "the card".
+- The one who acted is the subject. When you did something, say "I added…" or "I changed…". Don't make the code, the comment or the file the subject.
+- Evidence goes after a colon.
+
+No: The 0 is worth the lead it gives you, not the card: in games where someone else leads, holding it does no better than not holding it.
+
+Yes: The 0 is worth only the lead it gives you. The 0 as just another value card is worth nothing: in games where someone else leads, holding it does no better than not holding it.
+
+No: `app.ts` loads `model.ts`, the model as base64 that the server can bundle, and the preview's bots `small.ts`, its 50-tree version, which only the preview's workers load.
+
+Yes: `app.ts` loads `model.ts`, the model as base64 that the server can bundle. The preview's bots load `small.ts`, the model's 50-tree version. Only the preview's workers load `small.ts`.
+
 # Defaults
 
 Lean on a tool's defaults, in commands and docs alike. Never pass a flag that only restates the default: `xcodebuild -scheme App` with no `-project` when there's one project and no `build` action, a device by name over its UDID. Keep flags that change something, like `-quiet`.
