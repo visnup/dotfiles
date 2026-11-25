@@ -23,7 +23,7 @@ One fact per sentence. This covers replies, commit messages, docs and READMEs al
 - Don't fold a second claim in as a contrast ("X, not Y", "X rather than Y"). Say what something is. Then say what it isn't, in its own sentence.
 - Don't turn the thing you just described into the subject of a tacked-on clause. Give it its own sentence and repeat the noun. Don't point back with "it" or "the card".
 - The one who acted is the subject. When you did something, say "I added…" or "I changed…". Don't make the code, the comment or the file the subject.
-- No passive voice. Name who acts, even when it's "you" or "the player". Write "Passing is final. Once you lead, keep playing." Don't write "Passing is final, so a lead has to be held." A "by" phrase that names the actor is fine: "Hilt is a card game for 3 to 6 players from CMYK's Magenta line, designed by Dominique Ehrhard."
+- No passive voice. Name who acts, even when it's "you" or "the player". Write "Passing is final. Once you lead, keep playing." Don't write "Passing is final, so a lead has to be held." The passive is fine only when it names who acts and keeps the subject on the topic: "Hilt is a card game for 3 to 6 players from CMYK's Magenta line, designed by Dominique Ehrhard." That sentence is about the game. So Hilt stays the subject, and the "by" phrase names the designer.
 - Evidence goes after a colon.
 
 No: The 0 is worth the lead it gives you, not the card: in games where someone else leads, holding it does no better than not holding it.
